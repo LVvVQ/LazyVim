@@ -2,19 +2,25 @@ return {
   "nvimdev/dashboard-nvim",
   event = "VimEnter",
   opts = function()
-    local logo = [[
-    ██╗                                   ██████╗ 
-    ██║      ██╗   ██╗         ██╗   ██╗ ██╔═══██╗
-    ██║      ██║   ██║         ██║   ██║ ██║   ██║
-    ██║      ██║   ██║██╗   ██╗██║   ██║ ██║▄▄ ██║
-    ███████╗ ╚██╗ ██╔╝██║   ██║╚██╗ ██╔╝ ╚██████╔╝
-    ╚══════╝  ╚████╔╝ ██║   ██║ ╚████╔╝   ╚══▀▀═╝ 
-    ╚═══╝  ╚██╗ ██╔╝  ╚═══╝
-    ╚████╔╝
-    ╚═══╝
-    ]]
+    local header = {
+      "                                                ",
+      "                                                ",
+      "                                                ",
+      " ██╗                                   ██████╗  ",
+      " ██║      ██╗   ██╗         ██╗   ██╗ ██╔═══██╗ ",
+      " ██║      ██║   ██║         ██║   ██║ ██║   ██║ ",
+      " ██║      ██║   ██║██╗   ██╗██║   ██║ ██║▄▄ ██║ ",
+      " ███████╗ ╚██╗ ██╔╝██║   ██║╚██╗ ██╔╝ ╚██████╔╝ ",
+      " ╚══════╝  ╚████╔╝ ██║   ██║ ╚████╔╝   ╚══▀▀═╝  ",
+      "            ╚═══╝  ╚██╗ ██╔╝  ╚═══╝             ",
+      "                    ╚████╔╝                     ",
+      "                     ╚═══╝                      ",
+      "                                                ",
+      "                                                ",
+      "                                                ",
+    }
 
-    logo = string.rep("\n", 3) .. logo
+    -- logo = string.rep("\n", 3) .. logo
 
     local opts = {
       theme = "doom",
@@ -24,7 +30,8 @@ return {
         statusline = false,
       },
       config = {
-        header = vim.split(logo, "\n"),
+        -- header = vim.split(logo, "\n"),
+        header = header,
         -- stylua: ignore
         center = {
           { action = "Telescope find_files",                                    desc = " Find file",       icon = " ", key = "f" },
