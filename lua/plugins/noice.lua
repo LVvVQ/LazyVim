@@ -29,10 +29,11 @@ return {
       opts = { stop = false },
     })
 
+    opts.commands = opts.commands or {}
     opts.commands = {
       all = {
         -- options for the message history that you get with `:Noice`
-        view = "split",
+        view = "popup",
         opts = { enter = true, format = "details" },
         filter = {},
       },
