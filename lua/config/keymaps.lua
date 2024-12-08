@@ -19,6 +19,8 @@ keymap("n", "yL", "y$", opts)
 
 keymap("n", "th", "<cmd>bNext<CR>", opts)
 keymap("n", "tl", "<cmd>bnext<CR>", opts)
+keymap("n", "<leader>s-", "<C-w>t<C-w>K", opts)
+keymap("n", "<leader>s|", "<C-w>t<C-w>H", opts)
 
 -- Insert --
 keymap("i", "<C-j>", "<down>", opts)
